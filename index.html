@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+
+		<title>Jogo da velha</title>
+		<script src="js/jquery-3.2.1.js"></script>
+		<script src="js/jogo.js"></script>
+		<!--link cdn do  bootstrap min-->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	</head>
+
+	<body>	
+		<div id="pagina-inicial" align="center">
+			<table border="0" width="600px">
+				<tbody>
+					<tr>
+						<td colspan="3" align="center"><h1> Jogo da velha </h1></td>
+					</tr>
+					<tr>
+						<td align="center">
+							<img src="imagens/jogador_1.png">
+							<br />
+							<input id="entrada-apelido-jogador-1" type="text" maxlength="10" placeholder="Apelido jogador 1" style="border: 0px;">
+						</td>
+						<td align="center">
+							<img id="btn-iniciar-jogo" src="imagens/iniciar.png">
+						</td>
+						<td align="center">
+							<img src="imagens/jogador_2.png">
+							<br />
+							<input id="entrada-apelido-jogador-2" type="text" maxlength="10" placeholder="Apelido jogador 2" style="border: 0px;">
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div id="palco-jogo" style=" display:none;margin-top: 50px; text-align: center; ">
+			<div style="display: inline-block;">
+				<span id="vencedor-1" style="font-size: 30px;"></span>
+				<br />
+				<img src="imagens/jogador_1.png">
+				<br />
+				<span id="nome-jogador-1" style="font-size: 30px;"></span>
+			</div>
+			<div style="display: inline-block;">
+
+
+				<!-- ********** Aqui começa o gride de jogadas ********** -->
+
+				<table border="0">
+					<tr>
+						<td style="border-bottom: solid 1px red; border-right: solid 1px red;">
+							<div id="a-1" class="jogada" style="width: 100px;height: 100px;"></div>
+						</td>
+						<td style="border-bottom: solid 1px red; border-right: solid 1px red;">
+							<div id="a-2" class="jogada" style="width: 100px;height: 100px;"></div>
+						</td>
+						<td style="border-bottom: solid 1px red;">
+							<div id="a-3" class="jogada" style="width: 100px;height: 100px;"></div>
+						</td>
+					</tr>
+					<tr>
+						<td style="border-bottom: solid 1px red; border-right: solid 1px red;">
+							<div id="b-1" class="jogada" style="width: 100px;height: 100px;"></div>
+						</td>
+						<td style="border-bottom: solid 1px red; border-right: solid 1px red;">
+							<div id="b-2" class="jogada" style="width: 100px;height: 100px;"></div>
+						</td>
+						<td style="border-bottom: solid 1px red;">
+							<div id="b-3" class="jogada" style="width: 100px;height: 100px";></div>
+						</td>
+					</tr>
+					<tr>
+						<td style="border-right: solid 1px red;bor">
+							<div id="c-1" class="jogada" style="width: 100px;height: 100px";></div>
+						</td>
+						<td style="border-right: solid 1px red;">
+							<div id="c-2" class="jogada" style="width: 100px;height: 100px";></div>
+						</td>
+						<td>
+							<div id="c-3" class="jogada" style="width: 100px;height: 100px";></div>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="3">
+							<button id="btn-novo-jogo"  class="btn btn-primary" type="button" style="display: none; margin-top: 60px;">Jogar novamente</button>
+						</td>
+					</tr>
+					
+				</table>
+
+
+				<!--**********  Aqui Termina o gride de jogadas **********-->
+
+
+			</div>
+			<div style="display: inline-block;">
+				<span id="vencedor-2" style="font-size: 30px;"></span>
+				<br />
+				<img src="imagens/jogador_2.png">
+				<br />
+				<span id="nome-jogador-2" style="font-size: 30px;"></span>
+				
+			</div>
+			
+		</div>
+
+	</body>
+</html>
